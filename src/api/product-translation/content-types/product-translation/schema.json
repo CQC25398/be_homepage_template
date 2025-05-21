@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_translations",
+  "info": {
+    "singularName": "product-translation",
+    "pluralName": "product-translations",
+    "displayName": "product_translation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "product_translations"
+    },
+    "language_code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "key_part": {
+      "type": "json"
+    },
+    "detail_description": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "model_type": {
+      "type": "string"
+    }
+  }
+}
