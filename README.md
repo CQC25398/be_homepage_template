@@ -58,4 +58,65 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+# Medical Device Strapi Backend
+
+## System Requirements
+- Node.js >= 18.0.0
+- npm >= 6.0.0
+- PostgreSQL
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd strapi-backend
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create .env file:
+```bash
+cp .env.example .env
+```
+Then update the environment variables in the .env file with your information.
+
+4. Run development server:
+```bash
+npm run develop
+```
+
+5. Access Strapi Admin:
+- URL: http://localhost:1337/admin
+- Create a new admin account
+
+## Project Structure
+- `config/`: Strapi configuration
+- `src/`: Source code
+- `public/`: Public files
+- `database/`: Migrations and seeds
+
+## API Endpoints
+- REST API: http://localhost:1337/api
+- GraphQL: http://localhost:1337/graphql
+
+## Development Commands
+- `npm run develop`: Run development server
+- `npm run build`: Build for production
+- `npm run start`: Run production server
+
+## Database Configuration
+This project uses PostgreSQL with Supabase. Make sure to:
+1. Create a Supabase project
+2. Get your database credentials
+3. Update the .env file with your database information
+
+## Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
