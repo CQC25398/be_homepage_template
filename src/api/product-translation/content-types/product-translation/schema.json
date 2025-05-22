@@ -4,10 +4,11 @@
   "info": {
     "singularName": "product-translation",
     "pluralName": "product-translations",
-    "displayName": "product_translation"
+    "displayName": "product_translation",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "product": {
