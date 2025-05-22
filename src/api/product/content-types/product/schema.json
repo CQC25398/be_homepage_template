@@ -12,28 +12,28 @@
   },
   "attributes": {
     "code": {
-      "type": "string"
+      "type": "text"
     },
     "name": {
-      "type": "string"
+      "type": "text"
     },
     "image": {
-      "type": "string"
+      "type": "text"
     },
     "thumbnail": {
-      "type": "string"
+      "type": "text"
     },
     "key_part": {
       "type": "json"
     },
     "detail_description": {
-      "type": "string"
+      "type": "text"
     },
     "summary": {
-      "type": "string"
+      "type": "text"
     },
     "model_type": {
-      "type": "string"
+      "type": "text"
     },
     "product_translations": {
       "type": "relation",

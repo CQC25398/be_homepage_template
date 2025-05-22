@@ -394,8 +394,8 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
       'api::category.category'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
-    name_ko: Schema.Attribute.String;
+    name: Schema.Attribute.Text;
+    name_ko: Schema.Attribute.Text;
     products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -420,20 +420,20 @@ export interface ApiProductTranslationProductTranslation
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    detail_description: Schema.Attribute.String;
+    detail_description: Schema.Attribute.Text;
     key_part: Schema.Attribute.JSON;
-    language_code: Schema.Attribute.String;
+    language_code: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::product-translation.product-translation'
     > &
       Schema.Attribute.Private;
-    model_type: Schema.Attribute.String;
-    name: Schema.Attribute.String;
+    model_type: Schema.Attribute.Text;
+    name: Schema.Attribute.Text;
     product: Schema.Attribute.Relation<'manyToOne', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
-    summary: Schema.Attribute.String;
+    summary: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -453,12 +453,12 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
-    code: Schema.Attribute.String;
+    code: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    detail_description: Schema.Attribute.String;
-    image: Schema.Attribute.String;
+    detail_description: Schema.Attribute.Text;
+    image: Schema.Attribute.Text;
     key_part: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -466,15 +466,15 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     > &
       Schema.Attribute.Private;
-    model_type: Schema.Attribute.String;
-    name: Schema.Attribute.String;
+    model_type: Schema.Attribute.Text;
+    name: Schema.Attribute.Text;
     product_translations: Schema.Attribute.Relation<
       'oneToMany',
       'api::product-translation.product-translation'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    summary: Schema.Attribute.String;
-    thumbnail: Schema.Attribute.String;
+    summary: Schema.Attribute.Text;
+    thumbnail: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

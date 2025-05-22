@@ -12,10 +12,10 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "text"
     },
     "name_ko": {
-      "type": "string"
+      "type": "text"
     },
     "products": {
       "type": "relation",
