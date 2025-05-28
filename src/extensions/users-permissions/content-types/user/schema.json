@@ -1,0 +1,65 @@
+ {
+  "collectionName": "up_users",
+  "info": {
+    "singularName": "user",
+    "pluralName": "users",  
+    "displayName": "User",
+    "description": "",
+    "name": "user"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "required": true,
+      "unique": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "required": true
+    },
+    "provider": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password",
+      "private": true,
+      "minLength": 6
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role",
+      "inversedBy": "users"
+    },
+    "jwt_token": {
+      "type": "text",
+      "private": true
+    },
+    "refresh_token": {
+      "type": "text",
+      "private": true
+    }
+  }
+}
