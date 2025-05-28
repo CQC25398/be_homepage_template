@@ -19,5 +19,9 @@ module.exports = [
   'strapi::body',
   'strapi::session',
   'strapi::favicon',
+  {
+    name: 'global::jwt-sync',
+    config: {},
+  },
   'strapi::public',
 ];
